@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { PauseProvider } from "@/components/pause-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export default function RootLayout({
@@ -15,7 +16,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <PauseProvider>{children}</PauseProvider>
         </ThemeProvider>
       </body>
     </html>
